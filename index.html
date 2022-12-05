@@ -75,27 +75,21 @@
                         .then((res) => {
                             const data = res.articles;
                             getElement('title1').innerHTML = data[0].title;
-                            getElement('desc1').innerHTML = data[0].content;
                             getElement('title2').innerHTML = data[1].title;
-                            getElement('desc2').innerHTML = data[1].content;
                             getElement('title3').innerHTML = data[2].title;
-                            getElement('desc3').innerHTML = data[2].content;
                         });
                 </script>
                 <div onclick="alert('No Page Linked Yet')" class="col">
                     <img src="./files/assets/CyberCrew.png">
                     <h1 id="title1" style="text-align:center;margin-top:10px;">Failed to Fetch</h1>
-                    <p id="desc1" style="text-align:center;margin-top:10px;">Failed to Fetch</p>
                 </div>
                 <div onclick="alert('No Page Linked Yet')" class="col">
                     <img src="./files/assets/CyberCrew.png">
                     <h1 id="title2" style="text-align:center;margin-top:10px;">Failed to Fetch</h1>
-                    <p id="desc2" style="text-align:center;margin-top:10px;">Failed to Fetch</p>
                 </div>
                 <div onclick="alert('No Page Linked Yet')" class="col">
                     <img src="./files/assets/CyberCrew.png">
                     <h1 id="title3" style="text-align:center;margin-top:10px;">Failed to Fetch</h1>
-                    <p id="desc3" style="text-align:center;margin-top:10px;">Failed to Fetch</p>
                 </div>
             </div>
         </div>
