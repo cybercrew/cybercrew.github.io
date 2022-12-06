@@ -154,8 +154,9 @@ canvas {
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    width: 160px;
-    height: 100px;
+    width: auto;
+    height: 70%;
+    border-radius: 10px;
 }
 
 .col {
@@ -165,7 +166,10 @@ canvas {
     border-radius: 15px;
     transition-duration: 400ms;
 }
-
+.col h1{
+    margin-top: 8px;
+    font-size: 1.5em;
+}
 .col:hover {
     background-color: black;
 }

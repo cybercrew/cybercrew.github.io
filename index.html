@@ -24,7 +24,7 @@
         </div>
         <div class="btnContainer">
             <button class="headerBtn" onclick="document.getElementById('articles').scrollIntoView();">Recent
-                Highlights</button>
+                Articles</button>
         </div>
     </div>
     <div class="logoContainer">
@@ -63,7 +63,7 @@
         </div>
         <div id="articles" class="articles">
             <div class="headingContainer">
-                <h1 class="articlesHead">Recent Highlights</h1>
+                <h1 class="articlesHead">Recent Articles</h1>
             </div>
             <div class="columns">
                 <script>
@@ -75,21 +75,24 @@
                         .then((res) => {
                             const data = res.articles;
                             getElement('title1').innerHTML = data[0].title;
+                            getElement('img1').src = data[0].imgUrl;
                             getElement('title2').innerHTML = data[1].title;
+                            getElement('img2').src = data[1].imgUrl;
                             getElement('title3').innerHTML = data[2].title;
+                            getElement('img3').src = data[2].imgUrl;
                         });
                 </script>
                 <div onclick="alert('No Page Linked Yet')" class="col">
-                    <img src="./files/assets/CyberCrew.png">
-                    <h1 id="title1" style="text-align:center;margin-top:10px;">Failed to Fetch</h1>
+                    <img id="img1" src="./files/assets/CyberCrew.png">
+                    <h1 id="title1" style="text-align:center;">Failed to Fetch</h1>
                 </div>
                 <div onclick="alert('No Page Linked Yet')" class="col">
-                    <img src="./files/assets/CyberCrew.png">
-                    <h1 id="title2" style="text-align:center;margin-top:10px;">Failed to Fetch</h1>
+                    <img id="img2" src="./files/assets/CyberCrew.png">
+                    <h1 id="title2" style="text-align:center;">Failed to Fetch</h1>
                 </div>
                 <div onclick="alert('No Page Linked Yet')" class="col">
-                    <img src="./files/assets/CyberCrew.png">
-                    <h1 id="title3" style="text-align:center;margin-top:10px;">Failed to Fetch</h1>
+                    <img id="img3" src="./files/assets/CyberCrew.png">
+                    <h1 id="title3" style="text-align:center;">Failed to Fetch</h1>
                 </div>
             </div>
         </div>
