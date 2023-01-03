@@ -80,12 +80,13 @@ $(window).scroll(function () {
         var elemTop = $(elem).offset().top;
         return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
     }
+    if(document.getElementById('.whatWeDo') != null){
     if (elementScrolled('.whatWeDo')) {
         $('.whatWeDo').animate({
             top: 1,
             opacity: '1.0'
         }, 300)
-    }
+    }}
     if (elementScrolled('#articles')){
         $('.whatWeDo').animate({
             top: 1,

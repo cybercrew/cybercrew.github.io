@@ -17,7 +17,7 @@
     <script src="./files/script.js"></script>
     <div class="headerContainer">
         <div class="btnContainer">
-            <button class="headerBtn" onclick="window.scrollTo(0,0)">Home</button>
+            <button class="headerBtn" onclick="window.location.assign('./index.html')">Home</button>
         </div>
         <div class="btnContainer">
             <button class="headerBtn" onclick="alert('No Page Linked Yet')">About Us</button>
@@ -27,7 +27,7 @@
                 Articles</button>
         </div>
     </div>
-    <div class="titlebox">
+    <div class="roboticsTitlebox">
         <p>><span id=headText class=headText></span></p>
         <script>
             var typed = new Typed("#headText", {
@@ -38,40 +38,27 @@
             });
         </script>
     </div>
+    <div class="roboticsAboutContainer">
+        <p>Robotics is the branch of technology that deals with the design, construction, operation, and application of
+            robots. Robots are often used to perform tasks that are difficult for humans to perform or that are
+            dangerous, such as exploring mines or defusing bombs. They are also used in manufacturing, transportation,
+            and agriculture. There are many different types of robots, ranging from simple machines that can only
+            perform a few specific tasks, to complex systems that can be programmed to do almost anything. Robotics
+            technology is constantly evolving, and as it becomes more advanced, robots are becoming increasingly able to
+            assist humans in a wider range of activities.
+        </p>
+    </div>
     <div class="contentContainer">
         <div id="articles" class="articles">
             <div class="headingContainer">
-                <h1 class="articlesHead">Recent Articles</h1>
+                <h1 class="articlesHead">Articles</h1>
             </div>
             <div class="columns">
                 <script>
                     function getElement(id) {
                         return document.getElementById(id);
                     }
-                    fetch('https://website-backend.meesam4687.repl.co/articles')
-                        .then(res => res.json())
-                        .then((res) => {
-                            const data = res.articles;
-                            getElement('title1').innerHTML = data[0].title;
-                            getElement('img1').src = data[0].imgUrl;
-                            getElement('title2').innerHTML = data[1].title;
-                            getElement('img2').src = data[1].imgUrl;
-                            getElement('title3').innerHTML = data[2].title;
-                            getElement('img3').src = data[2].imgUrl;
-                        });
                 </script>
-                <div onclick="alert('No Page Linked Yet')" class="col">
-                    <img id="img1" src="./files/assets/CyberCrew.png">
-                    <h1 id="title1" style="text-align:center;">Failed to Fetch</h1>
-                </div>
-                <div onclick="alert('No Page Linked Yet')" class="col">
-                    <img id="img2" src="./files/assets/CyberCrew.png">
-                    <h1 id="title2" style="text-align:center;">Failed to Fetch</h1>
-                </div>
-                <div onclick="alert('No Page Linked Yet')" class="col">
-                    <img id="img3" src="./files/assets/CyberCrew.png">
-                    <h1 id="title3" style="text-align:center;">Failed to Fetch</h1>
-                </div>
             </div>
         </div>
         <div class="footer">
