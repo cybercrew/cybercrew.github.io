@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Robotics | CyberCrew</title>
+    <title>Articles | CyberCrew</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./files/style.css" type="text/css">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
@@ -27,49 +27,18 @@
                 Articles</button>
         </div>
     </div>
-    <div class="categTitlebox">
-        <p>><span id=headText class=headText></span></p>
+    <div class="articleContentContainer">
         <script>
-            var typed = new Typed("#headText", {
-                strings: ["Robotics"],
-                typeSpeed: 60,
-                backSpeed: 40,
-                loop: false
-            });
+            let articleTitle = window.location.hash
+        </script>
+        <div class="mainArticleContent">
+            <p id="articleContent"></p>
+        </div>
+        <script>
+            document.getElementById("articleContent").innerHTML = "URL Says " + articleTitle.split("#")[1]
         </script>
     </div>
-    <div class="categAboutContainer">
-        <p>Robotics is the branch of technology that deals with the design, construction, operation, and application of
-            robots. Robots are often used to perform tasks that are difficult for humans to perform or that are
-            dangerous, such as exploring mines or defusing bombs. They are also used in manufacturing, transportation,
-            and agriculture. There are many different types of robots, ranging from simple machines that can only
-            perform a few specific tasks, to complex systems that can be programmed to do almost anything. Robotics
-            technology is constantly evolving, and as it becomes more advanced, robots are becoming increasingly able to
-            assist humans in a wider range of activities.<span class="caret"></span>
-        </p>
-    </div>
     <div class="contentContainer">
-        <div id="articles" class="articles">
-            <div class="headingContainer">
-                <h1 class="articlesHead">Articles</h1>
-            </div>
-            <div class="columns">
-                <script>
-                    function getElement(id) {
-                        return document.getElementById(id);
-                    }
-                    let articleTitle = "art1"
-                </script>
-                <div onclick="window.location.assign('./articlePage.html#'+articleTitle)" class="col">
-                    <img id="img1" src="./files/assets/CyberCrew.png">
-                    <h1 id="title1" style="text-align:center;">Failed to Fetch</h1>
-                </div>
-                <div onclick="window.location.assign('./articlePage.html#'+articleTitle)" class="col">
-                    <img id="img2" src="./files/assets/CyberCrew.png">
-                    <h1 id="title2" style="text-align:center;">Failed to Fetch</h1>
-                </div>
-            </div>
-        </div>
         <div class="footer">
             <div class="buttons">
                 <button class="button"><img src="./files/assets/facebook.png"></button>

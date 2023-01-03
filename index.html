@@ -20,7 +20,7 @@
             <button class="headerBtn" onclick="window.scrollTo(0,0)">Home</button>
         </div>
         <div class="btnContainer">
-            <button class="headerBtn" onclick="alert('No Page Linked Yet')">About Us</button>
+            <button class="headerBtn" onclick="window.location.assign('./about.html')">About Us</button>
         </div>
         <div class="btnContainer">
             <button class="headerBtn" onclick="document.getElementById('articles').scrollIntoView();">Recent
@@ -70,10 +70,11 @@
                     function getElement(id) {
                         return document.getElementById(id);
                     }
+                    let data
                     fetch('https://website-backend.meesam4687.repl.co/articles')
                         .then(res => res.json())
                         .then((res) => {
-                            const data = res.articles;
+                            data = res.articles;
                             getElement('title1').innerHTML = data[0].title;
                             getElement('img1').src = data[0].imgUrl;
                             getElement('title2').innerHTML = data[1].title;
@@ -82,15 +83,15 @@
                             getElement('img3').src = data[2].imgUrl;
                         });
                 </script>
-                <div onclick="alert('No Page Linked Yet')" class="col">
+                <div onclick="window.location.assign('./articlePage.html#'+data[0].title.split(' ').join(''))" class="col">
                     <img id="img1" src="./files/assets/CyberCrew.png">
                     <h1 id="title1" style="text-align:center;">Failed to Fetch</h1>
                 </div>
-                <div onclick="alert('No Page Linked Yet')" class="col">
+                <div onclick="window.location.assign('./articlePage.html#'+data[1].title.split(' ').join(''))" class="col">
                     <img id="img2" src="./files/assets/CyberCrew.png">
                     <h1 id="title2" style="text-align:center;">Failed to Fetch</h1>
                 </div>
-                <div onclick="alert('No Page Linked Yet')" class="col">
+                <div onclick="window.location.assign('./articlePage.html#'+data[2].title.split(' ').join(''))" class="col">
                     <img id="img3" src="./files/assets/CyberCrew.png">
                     <h1 id="title3" style="text-align:center;">Failed to Fetch</h1>
                 </div>
