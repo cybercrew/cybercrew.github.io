@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=JetBrains+Mono&family=Quicksand&display=swap');
+/*Imported fonts go above this comment*/
 * {
     margin: 0%;
 }
@@ -122,6 +126,7 @@ canvas {
     padding: 15px 32px;
     text-align: center;
     font-size: 16px;
+    font-family: JetBrains Mono;
 }
 
 .headerBtn:hover {
@@ -137,8 +142,13 @@ canvas {
     display: flex;
     place-content: center;
     font-size: 25px;
+    font-family: JetBrains Mono;
+    color: rgb(207, 28, 223);
 }
-
+#wedothis
+{
+    color:white;
+}
 .columns {
     margin-left: 0px;
     margin-right: 10px;
@@ -184,6 +194,7 @@ canvas {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family:Quicksand;
 }
 .buttons{
     margin-left: 30px;
@@ -274,3 +285,13 @@ canvas {
     transform: translate(-50%);
 }
 /*Random Comment so that I can commit to re-push it to vercel*/
+.titlebox {
+    color: rgb(114, 34, 0);
+    font-family: Chivo Mono;
+    font-weight: 500;
+    top: 10%;
+    position: absolute;
+    font-size: 70px;
+    left: 50%;
+    transform: translate(-50%);
+}
