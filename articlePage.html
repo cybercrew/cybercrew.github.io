@@ -35,7 +35,21 @@
             <p id="articleContent"></p>
         </div>
         <script>
-            document.getElementById("articleContent").innerHTML = "URL Says " + articleTitle.split("#")[1]
+            let data
+            fetch('https://website-backend.meesam4687.repl.co/articles')
+                .then(res => res.json())
+                .then((res) => {
+                    data = res.articles;
+                    let article = data.find(obj => {
+                        return obj.title.split(' ').join('') === articleTitle.split("#")[1]
+                    });
+                    document.getElementById("articleContent").innerHTML = `
+                    Title: ${article.title}<br>
+                    Content: ${article.content}<br>
+                    <br><br>
+                    Early Testing Article Page
+                    `
+                });
         </script>
     </div>
     <div class="contentContainer">
