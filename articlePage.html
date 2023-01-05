@@ -34,26 +34,7 @@
         <div class="mainArticleContent">
             <p id="articleContent"></p>
         </div>
-        <script>
-            let data
-            fetch('https://website-backend.meesam4687.repl.co/articles')
-                .then(res => res.json())
-                .then((res) => {
-                    data = res.articles;
-                    let article = data.find(obj => {
-                        return obj.title.split(' ').join('') === articleTitle.split("#")[1]
-                    });
-                    document.getElementById("articleContent").innerHTML = `
-                    Title: ${article.title}<br>
-                    Content: ${article.content}<br>
-                    <br><br>
-                    Early Testing Article Page
-                    `
-                });
-        </script>
-    </div>
-    <div class="contentContainer">
-        <div class="footer">
+        <div class="artFooter">
             <div class="buttons">
                 <button class="button"><img src="./files/assets/facebook.png"></button>
                 <button class="button"><img class="twbtn" src="./files/assets/twitter.png"></button>
@@ -73,6 +54,26 @@
                 <p>Email: example@dpssrinagar.com</p>
             </div>
         </div>
+        <script>
+            let data
+            fetch('https://website-backend.meesam4687.repl.co/articles')
+                .then(res => res.json())
+                .then((res) => {
+                    data = res.articles;
+                    let article = data.find(obj => {
+                        return obj.title.split(' ').join('') === articleTitle.split("#")[1]
+                    });
+                    document.getElementById("articleContent").innerHTML = `
+                    <div class=artImgDiv>
+                    <img class="articleImage" src="${article.imgUrl}"></img>
+                    </div>
+                    <h1 class="articleHeading">${article.title}</h1>
+                    <hr>
+                    <p class="articleContent">${article.content}</p><br>
+                    <div class="articleAuthor"><hr><p style="margin-left: 10px;margin-top: 5px;">Article Written By ${article.author}</p></div>
+                    `
+                });
+        </script>
     </div>
 </body>
 

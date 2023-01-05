@@ -329,10 +329,49 @@ canvas {
     border-radius: 10px;
     margin-bottom: 20px;
     top: 100px;
+    min-height: 90%;
 }
 .articleContentContainer {
+    height: 100%;
     width: 100%;
     position: absolute;
     color: white;
     font-family: system-ui;
+}
+.artImgDiv{
+    display: flex;
+    justify-content: center;
+}
+.articleImage{
+    height: 20rem;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+.articleHeading{
+    text-align: center;
+    font-family: Chivo Mono;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.articleContent{
+    font-size: 2vh;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: Quicksand;
+}
+.artFooter{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.articleAuthor{
+    font-family: Quicksand;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5px;
+    width: 100%;
 }

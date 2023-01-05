@@ -87,6 +87,7 @@ $(window).scroll(function () {
             opacity: '1.0'
         }, 300)
     }}
+    if(document.getElementById('articles') != null){
     if (elementScrolled('#articles')){
         $('.whatWeDo').animate({
             top: 1,
@@ -96,6 +97,6 @@ $(window).scroll(function () {
             top: 1,
             opacity: 1.0
         }, 300)
-    }
+    }}
 });
 
