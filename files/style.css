@@ -131,6 +131,7 @@ canvas {
 
 .headerBtn:hover {
     border-radius: 10px;
+    background-color: #2f3a50;
 }
 
 .btnContainer {
@@ -368,9 +369,6 @@ canvas {
     align-items: center;
 }
 .articleAuthor{
-    font-family: Quicksand;
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 5px;
-    width: 100%;
+    color: #ffffff7a;
+    font-size: 2vh;
 }

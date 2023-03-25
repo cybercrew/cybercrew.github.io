@@ -17,14 +17,13 @@
     <script src="./files/script.js"></script>
     <div class="headerContainer">
         <div class="btnContainer">
-            <button class="headerBtn" onclick="window.scrollTo(0,0)">Home</button>
+            <button class="headerBtn" onclick="window.location.assign('./about.html')">About</button>
         </div>
         <div class="btnContainer">
-            <button class="headerBtn" onclick="window.location.assign('./about.html')">About Us</button>
+            <button class="headerBtn" onclick="window.location.assign('./articles.html')">Articles</button>
         </div>
         <div class="btnContainer">
-            <button class="headerBtn" onclick="document.getElementById('articles').scrollIntoView();">Recent
-                Articles</button>
+            <button class="headerBtn" onclick="">Fields</button>
         </div>
     </div>
     <div class="logoContainer">
@@ -51,10 +50,12 @@
             <h1 class="whatHead">The Crew</h1>
             <div class="whatText">
                 <p>The CyberCrew is the IT Club of DPS Srinagar. It was founded in 2013, with an aim to provide a
-                    platform to the students of Kashmir to share and showcase their knowledge and skills. CyberCrew is famous for
+                    platform to the students of Kashmir to share and showcase their knowledge and skills. CyberCrew is
+                    famous for
                     organising an annual event, TechKnow, which is the only IT related mega-event for schools in Jammu
                     and Kashmir. We at the CyberCrew communicate using a language that only we decipher best. The
-                    CyberCrew provides an opportunity for all the IT fanatics of the school to take their first step towards realizing
+                    CyberCrew provides an opportunity for all the IT fanatics of the school to take their first step
+                    towards realizing
                     their dream of deciphering computers. The best part of it all is that we provide you with a
                     beginning in learning IT at home i.e, in our own school.</p>
             </div>
@@ -79,19 +80,27 @@
                             getElement('img2').src = data[1].imgUrl;
                             getElement('title3').innerHTML = data[2].title;
                             getElement('img3').src = data[2].imgUrl;
+                        })
+                        .catch(err => {
+                            getElement('title1').innerHTML = "Failed to Load";
+                            getElement('title2').innerHTML = "Failed to Load";
+                            getElement('title3').innerHTML = "Failed to Load";
                         });
                 </script>
-                <div onclick="window.location.assign('./articlePage.html#'+data[0].title.split(' ').join(''))" class="col">
+                <div onclick="window.location.assign('./articlePage.html#'+data[0].title.split(' ').join(''))"
+                    class="col">
                     <img id="img1" src="./files/assets/CyberCrew.png">
-                    <h1 id="title1" style="text-align:center;">Failed to Fetch</h1>
+                    <h1 id="title1" style="text-align:center;">Loading...</h1>
                 </div>
-                <div onclick="window.location.assign('./articlePage.html#'+data[1].title.split(' ').join(''))" class="col">
+                <div onclick="window.location.assign('./articlePage.html#'+data[1].title.split(' ').join(''))"
+                    class="col">
                     <img id="img2" src="./files/assets/CyberCrew.png">
-                    <h1 id="title2" style="text-align:center;">Failed to Fetch</h1>
+                    <h1 id="title2" style="text-align:center;">Loading...</h1>
                 </div>
-                <div onclick="window.location.assign('./articlePage.html#'+data[2].title.split(' ').join(''))" class="col">
+                <div onclick="window.location.assign('./articlePage.html#'+data[2].title.split(' ').join(''))"
+                    class="col">
                     <img id="img3" src="./files/assets/CyberCrew.png">
-                    <h1 id="title3" style="text-align:center;">Failed to Fetch</h1>
+                    <h1 id="title3" style="text-align:center;">Loading...</h1>
                 </div>
             </div>
         </div>
