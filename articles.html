@@ -35,11 +35,16 @@
         <div id="articles" class="articles" style="opacity: 1.0; top:1;">
             <div class="headingContainer">
                 <h1 class="articlesHead">Articles</h1>
-                <input class="searchBar" type="text" placeholder="Search..."> <button id="searchBtn"
+                <button class="backBtn" id="backBtn" style="display:none;">Back</button> <input class="searchBar" type="text" placeholder="Search..."> <button id="searchBtn"
                     class="searchBtn">Go</button>
                 <script>
                     document.getElementById("searchBtn").onclick = function () {
                         document.getElementById("cols").innerHTML = ""
+                        document.getElementById("backBtn").style.display = "inline";
+                        document.getElementsByClassName("searchBar")[0].style.borderRadius = "0px";
+                        document.getElementById("backBtn").onclick = function () {
+                            window.location.assign("./articles.html")
+                        }
                         let search = document.getElementsByClassName("searchBar")[0].value;
                         let data;
                         fetch('https://website-backend.meesam4687.repl.co/articles')
