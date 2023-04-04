@@ -35,9 +35,11 @@
         <div id="articles" class="articles" style="opacity: 1.0; top:1;">
             <div class="headingContainer">
                 <h1 class="articlesHead">Articles</h1>
-                <input class="searchBar" type="text" placeholder="Search..."> <button id="searchBtn" class="searchBtn">Go</button>
+                <input class="searchBar" type="text" placeholder="Search..."> <button id="searchBtn"
+                    class="searchBtn">Go</button>
                 <script>
                     document.getElementById("searchBtn").onclick = function () {
+                        document.getElementById("cols").innerHTML = ""
                         let search = document.getElementsByClassName("searchBar")[0].value;
                         let data;
                         fetch('https://website-backend.meesam4687.repl.co/articles')
@@ -46,7 +48,6 @@
                                 data = res.articles;
                                 for (var art of data) {
                                     if (art.title.toLowerCase().includes(search.toLowerCase())) {
-                                        document.getElementById("cols").innerHTML = ""
                                         let artColDiv = document.createElement("div");
                                         artColDiv.setAttribute('onclick', `window.location.assign('./articlePage.html#'+"${art.title.split(' ').join('')}")`)
                                         artColDiv.id = "artColDiv"
@@ -55,6 +56,9 @@
                                                        <h1 id="title1" style="text-align:center;">${art.title}</h1>`;
                                         document.getElementById("cols").appendChild(artColDiv);
                                     }
+                                }
+                                if (document.getElementById("cols").children.length === 0) {
+                                    document.getElementById("cols").innerHTML = "No Results Found"
                                 }
                             })
                     }
