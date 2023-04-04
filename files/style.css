@@ -431,7 +431,7 @@ canvas {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 30%;
-    height: 20%;
+    height: 200px;
     background-color: #1c252ea3;
     border-radius: 15px;
     transition-duration: 400ms;
@@ -453,4 +453,15 @@ canvas {
 
 .artCol:hover {
     background-color: black;
+}
+.artColumns {
+    margin-left: 0px;
+    margin-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    min-height: 90%;
+    place-items: center;
+    justify-content: space-around;
 }

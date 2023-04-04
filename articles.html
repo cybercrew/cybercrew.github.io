@@ -36,7 +36,7 @@
             <div class="headingContainer">
                 <h1 class="articlesHead">Articles</h1>
             </div>
-            <div class="columns" id="cols">
+            <div class="artColumns" id="cols">
                 <script>
                     function getElement(id) {
                         return document.getElementById(id);
@@ -46,9 +46,9 @@
                         .then(res => res.json())
                         .then((res) => {
                             data = res.articles;
-                            for(var art of data){
+                            for (var art of data) {
                                 let artColDiv = document.createElement("div");
-                                artColDiv.setAttribute('onclick',`window.location.assign('./articlePage.html#'+"${art.title.split(' ').join('')}")`)
+                                artColDiv.setAttribute('onclick', `window.location.assign('./articlePage.html#'+"${art.title.split(' ').join('')}")`)
                                 artColDiv.id = "artColDiv"
                                 artColDiv.className = "artCol"
                                 artColDiv.innerHTML = `<img id="img1" src="${art.imgUrl}">
