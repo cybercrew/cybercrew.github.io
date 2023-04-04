@@ -8,6 +8,11 @@
     <meta name="og:title" content="CyberCrew">
     <meta name="og:description" content="CyberCrew is the I.T. Club of DPS Srinagar.">
     <meta name="og:image" content="./files/assets/CyberCrew.png">
+    <script>
+        if (window.location.hash.length < 1) {
+            window.location.assign(window.location.href + "#1");
+        }
+    </script>
 </head>
 
 <body>
@@ -20,20 +25,41 @@
             <button class="headerBtn" onclick="window.location.assign('./index.html')">Home</button>
         </div>
         <div class="btnContainer">
-            <button class="headerBtn" onclick="window.location.assign('./about.html')">About Us</button>
+            <button class="headerBtn" onclick="window.location.assign('./about.html')">About</button>
         </div>
         <div class="btnContainer">
             <button class="headerBtn" onclick="window.location.assign('./robotics.html')">Robotics</button>
         </div>
     </div>
-    <div class="articleContentContainer">
-        <script>
-            let articleTitle = window.location.hash
-        </script>
-        <div class="mainArticleContent">
-            <p id="articleContent"></p>
+    <div class="artContentContainer">
+        <div id="articles" class="articles" style="opacity: 1.0; top:1;">
+            <div class="headingContainer">
+                <h1 class="articlesHead">Articles</h1>
+            </div>
+            <div class="columns" id="cols">
+                <script>
+                    function getElement(id) {
+                        return document.getElementById(id);
+                    }
+                    let data
+                    fetch('https://website-backend.meesam4687.repl.co/articles')
+                        .then(res => res.json())
+                        .then((res) => {
+                            data = res.articles;
+                            for(var art of data){
+                                let artColDiv = document.createElement("div");
+                                artColDiv.setAttribute('onclick',`window.location.assign('./articlePage.html#'+"${art.title.split(' ').join('')}")`)
+                                artColDiv.id = "artColDiv"
+                                artColDiv.className = "artCol"
+                                artColDiv.innerHTML = `<img id="img1" src="${art.imgUrl}">
+                                                       <h1 id="title1" style="text-align:center;">${art.title}</h1>`;
+                                document.getElementById("cols").appendChild(artColDiv);
+                            }
+                        })
+                </script>
+            </div>
         </div>
-        <div class="artFooter">
+        <div class="footer">
             <div class="buttons">
                 <button class="button"><img src="./files/assets/facebook.png"></button>
                 <button class="button"><img class="twbtn" src="./files/assets/twitter.png"></button>
@@ -53,25 +79,6 @@
                 <p>Email: example@dpssrinagar.com</p>
             </div>
         </div>
-        <script>
-            let data
-            fetch('https://website-backend.meesam4687.repl.co/articles')
-                .then(res => res.json())
-                .then((res) => {
-                    data = res.articles;
-                    let article = data.find(obj => {
-                        return obj.title.split(' ').join('') === articleTitle.split("#")[1]
-                    });
-                    document.getElementById("articleContent").innerHTML = `
-                    <div class=artImgDiv>
-                    <img class="articleImage" src="${article.imgUrl}"></img>
-                    </div>
-                    <h1 class="articleHeading">${article.title}<p class="articleAuthor">●<br>${article.author}</p></h1>
-                    <hr>
-                    <p class="articleContent">${article.content}</p><br>
-                    `
-                });
-        </script>
     </div>
 </body>
 
