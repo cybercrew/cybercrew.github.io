@@ -238,14 +238,14 @@ canvas {
     border-radius: 100%;
     border: none;
     background-color: #4C566A;
-    box-shadow: black 0px 0px 20px;
+    box-shadow: black 0px 0px 10px;
     transition-delay: none;
-    transition-duration: 400ms;
+    transition-duration: 0.15s;
     cursor: pointer;
 }
 
 .button:hover {
-    box-shadow: black 0px 0px 10px;
+    box-shadow: black 0px 0px 5px;
     transform: scale(1.1);
 }
 
