@@ -136,7 +136,7 @@ canvas {
     font-size: 16px;
     font-family: JetBrains Mono;
     cursor: pointer;
-    transition: hover 400ms;
+    transition-duration: 400ms;
 }
 
 .headerBtn:hover {
