@@ -480,6 +480,7 @@ canvas {
     padding: 10px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    color: white;
 }
 
 .searchBar:focus {
