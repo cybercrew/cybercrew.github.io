@@ -136,12 +136,16 @@ canvas {
     font-size: 16px;
     font-family: JetBrains Mono;
     cursor: pointer;
-    transition: 300ms;
+    transition: 250ms;
 }
 
 .headerBtn:hover {
     border-radius: 10px;
     background-color: #2f3a50;
+}
+
+.headerBtn:active {
+    opacity: 0.5;
 }
 
 .btnContainer {
@@ -189,7 +193,8 @@ canvas {
     height: 75%;
     background-color: #1c252ea3;
     border-radius: 15px;
-    transition-duration: 400ms;
+    transition-duration: 0.15s;
+    cursor: pointer;
 }
 
 .col h1 {
