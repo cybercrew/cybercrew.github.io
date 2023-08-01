@@ -130,7 +130,7 @@ canvas {
     background-color: #4C566A;
     border: none;
     border-radius: 40px;
-    transition-duration: 400ms;
+    transition-duration: 0.15s;
     color: white;
     padding: 15px 32px;
     text-align: center;
