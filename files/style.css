@@ -228,7 +228,6 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .button {
@@ -242,6 +241,7 @@ canvas {
     box-shadow: black 0px 0px 20px;
     transition-delay: none;
     transition-duration: 400ms;
+    cursor: pointer;
 }
 
 .button:hover {
