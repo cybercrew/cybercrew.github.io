@@ -436,7 +436,7 @@ canvas {
     height: 200px;
     background-color: #1c252ea3;
     border-radius: 15px;
-    transition-duration: 400ms;
+    transition-duration: 0.15s;
 }
 .artCol img {
     margin-top: 10px;
