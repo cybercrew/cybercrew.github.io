@@ -482,7 +482,7 @@ canvas {
     border-bottom-left-radius: 15px;
 }
 
-.searchBar:active {
+.searchBar:focus {
     outline: none;
 }
 
