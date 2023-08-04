@@ -7,9 +7,6 @@
     margin: 0%;
 }
 
-::selection {
-    background-color: black;
-
 ::-webkit-scrollbar {
     display: none;
 }
