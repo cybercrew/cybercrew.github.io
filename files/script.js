@@ -72,31 +72,3 @@ init();
 addSphere();
 render();
 
-
-$(window).scroll(function () {
-    function elementScrolled(elem) {
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
-        var elemTop = $(elem).offset().top;
-        return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
-    }
-    if(document.getElementById('.whatWeDo') != null){
-    if (elementScrolled('.whatWeDo')) {
-        $('.whatWeDo').animate({
-            top: 1,
-            opacity: '1.0'
-        }, 300)
-    }}
-    if(document.getElementById('articles') != null){
-    if (elementScrolled('#articles')){
-        $('.whatWeDo').animate({
-            top: 1,
-            opacity: '1.0'
-        }, 300)
-        $('#articles').animate({
-            top: 1,
-            opacity: 1.0
-        }, 300)
-    }}
-});
-
