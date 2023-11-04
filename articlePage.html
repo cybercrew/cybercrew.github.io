@@ -15,6 +15,31 @@
     <script src="./files/deps/jquery.min.js"></script>
     <script src="./files/deps/typed.min.js"></script>
     <script src="./files/script.js"></script>
+    <script>
+        let data
+        fetch('https://website-backend.meesam4687.repl.co/articles')
+            .then(res => res.json())
+            .then((res) => {
+                data = res.articles;
+                let article = data.find(obj => {
+                    return obj.title.split(' ').join('') === articleTitle.split("#")[1]
+                });
+                if(article.ytUrl){
+                    return window.location.assign(article.ytUrl);
+                }
+                document.getElementById("loading").innerHTML = ``
+                document.getElementById("loading").style.height = 0
+                document.getElementById("loading").style.width = 0
+                document.getElementById("articleContent").innerHTML = `
+                <div class=artImgDiv>
+                <img class="articleImage" src="${article.imgUrl}"></img>
+                </div>
+                <h1 class="articleHeading">${article.title}<p class="articleAuthor">●<br>${article.author}</p></h1>
+                <hr>
+                <p class="articleContent">${article.content}</p><br>
+                `
+            });
+    </script>
     <div class="headerContainer">
         <div class="btnContainer">
             <button class="headerBtn" onclick="window.location.assign('./index.html')">Home</button>
@@ -31,7 +56,7 @@
             let articleTitle = window.location.hash
         </script>
         <div class="mainArticleContent">
-            <p id="articleContent"></p>
+            <p id="articleContent"><div id="loading" style="height: 100%;width:100%;display:flex;justify-content: center;align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="70%" height="70%" viewBox="0 0 24 24"><style>.spinner_ajPY{transform-origin:center;animation:spinner_AtaB .75s infinite linear}@keyframes spinner_AtaB{100%{transform:rotate(360deg)}}</style><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/><path d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z" class="spinner_ajPY"/></svg></div></p>
         </div>
         <div class="artFooter">
             <div class="buttons">
@@ -53,25 +78,6 @@
                 <p>Email: example@dpssrinagar.com</p>
             </div>
         </div>
-        <script>
-            let data
-            fetch('https://website-backend.meesam4687.repl.co/articles')
-                .then(res => res.json())
-                .then((res) => {
-                    data = res.articles;
-                    let article = data.find(obj => {
-                        return obj.title.split(' ').join('') === articleTitle.split("#")[1]
-                    });
-                    document.getElementById("articleContent").innerHTML = `
-                    <div class=artImgDiv>
-                    <img class="articleImage" src="${article.imgUrl}"></img>
-                    </div>
-                    <h1 class="articleHeading">${article.title}<p class="articleAuthor">●<br>${article.author}</p></h1>
-                    <hr>
-                    <p class="articleContent">${article.content}</p><br>
-                    `
-                });
-        </script>
     </div>
 </body>
 
