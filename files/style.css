@@ -80,8 +80,8 @@ canvas {
     background-color: #3c43526b;
     border-radius: 10px;
     margin-bottom: 20px;
-    opacity: 0.5;
-    top: 100px;
+    opacity: 1.0;
+    top: 1;
 }
 
 .whatHead {
@@ -112,8 +112,8 @@ canvas {
     border-radius: 15px;
     margin-bottom: 20px;
     position: relative;
-    opacity: 0.5;
-    top: 100px;
+    opacity: 1.0;
+    top: 1;
 }
 
 .headingContainer {
