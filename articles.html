@@ -47,7 +47,7 @@
                         }
                         let search = document.getElementsByClassName("searchBar")[0].value;
                         let data;
-                        fetch('https://website-backend.meesam4687.repl.co/articles')
+                        fetch('https://be7d3cf1-caf6-4a8c-92b1-4763d33ac887-00-2p9duf0m5mq5.asia-a.replit.dev/articles')
                             .then(res => res.json())
                             .then((res) => {
                                 data = res.articles;
@@ -75,7 +75,7 @@
                         return document.getElementById(id);
                     }
                     let data
-                    fetch('https://website-backend.meesam4687.repl.co/articles')
+                    fetch('https://be7d3cf1-caf6-4a8c-92b1-4763d33ac887-00-2p9duf0m5mq5.asia-a.replit.dev/articles')
                         .then(res => res.json())
                         .then((res) => {
                             data = res.articles;
