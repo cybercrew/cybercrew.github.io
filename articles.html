@@ -50,7 +50,7 @@
                         fetch('https://backend-xsfm.onrender.com/articles')
                             .then(res => res.json())
                             .then((res) => {
-                                data = res.articles;
+                                data = res;
                                 for (var art of data) {
                                     if (art.title.toLowerCase().includes(search.toLowerCase())) {
                                         let artColDiv = document.createElement("div");
@@ -78,7 +78,7 @@
                     fetch('https://backend-xsfm.onrender.com/articles')
                         .then(res => res.json())
                         .then((res) => {
-                            data = res.articles;
+                            data = res;
                             for (var art of data) {
                                 let artColDiv = document.createElement("div");
                                 artColDiv.setAttribute('onclick', `window.location.assign('./articlePage.html#'+"${art.title.split(' ').join('')}")`)
