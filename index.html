@@ -72,13 +72,14 @@
                     let data
                     fetch('https://backend-xsfm.onrender.com/articles')
                         .then(res => res.json())
-                        .then((data) => {
-                            getElement('title1').innerHTML = data[0].title;
-                            getElement('img1').src = data[0].imgUrl;
-                            getElement('title2').innerHTML = data[1].title;
-                            getElement('img2').src = data[1].imgUrl;
-                            getElement('title3').innerHTML = data[2].title;
-                            getElement('img3').src = data[2].imgUrl;
+                        .then((dat) => {
+                            data = dat
+                            getElement('title1').innerHTML = dat[0].title;
+                            getElement('img1').src = dat[0].imgUrl;
+                            getElement('title2').innerHTML = dat[1].title;
+                            getElement('img2').src = dat[1].imgUrl;
+                            getElement('title3').innerHTML = dat[2].title;
+                            getElement('img3').src = dat[2].imgUrl;
                         })
                         .catch(err => {
                             console.log(err)
