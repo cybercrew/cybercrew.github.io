@@ -82,6 +82,7 @@
                             getElement('img3').src = data[2].imgUrl;
                         })
                         .catch(err => {
+                            console.log(err)
                             getElement('title1').innerHTML = "Failed to Load";
                             getElement('title2').innerHTML = "Failed to Load";
                             getElement('title3').innerHTML = "Failed to Load";
