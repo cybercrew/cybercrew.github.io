@@ -20,7 +20,7 @@
         fetch('https://backend-xsfm.onrender.com/articles')
             .then(res => res.json())
             .then((res) => {
-                data = res.articles;
+                data = res;
                 let article = data.find(obj => {
                     return obj.title.split(' ').join('') === articleTitle.split("#")[1]
                 });
