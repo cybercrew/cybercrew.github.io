@@ -72,8 +72,7 @@
                     let data
                     fetch('https://backend-xsfm.onrender.com/articles')
                         .then(res => res.json())
-                        .then((res) => {
-                            data = res.articles;
+                        .then((data) => {
                             getElement('title1').innerHTML = data[0].title;
                             getElement('img1').src = data[0].imgUrl;
                             getElement('title2').innerHTML = data[1].title;
