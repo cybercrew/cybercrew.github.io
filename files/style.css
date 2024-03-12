@@ -187,7 +187,7 @@ canvas {
     left: 50%;
     transform: translate(-50%);
     width: auto;
-    max-width: 9rem;
+    max-width: 11rem;
     height: 7rem;
     border-radius: 10px;
 }
