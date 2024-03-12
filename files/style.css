@@ -186,7 +186,8 @@ canvas {
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    width: 4rem;
+    width: auto;
+    max-width: 9rem;
     height: 7rem;
     border-radius: 10px;
 }
