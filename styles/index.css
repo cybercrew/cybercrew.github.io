@@ -227,15 +227,15 @@ body {
     }
 
     .c1 {
-        width: 90vw;
+        width: 88vw;
     }
 
     .c2 {
-        width: 90vw;
+        width: 88vw;
     }
 
     .footer-card {
-        width: 50vw;
+        width: 47vw;
         height: 7rem;
     }
 
@@ -268,5 +268,9 @@ body {
     .textContainer p {
         margin-top: -10vh;
         font-size: 1rem;
+    }
+
+    .footer {
+        justify-content: center;
     }
 }
