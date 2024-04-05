@@ -61,10 +61,11 @@
                     //I have no idea why this is not getting the full width, so for now i used this workaround
                     let elem = document.getElementById('c1');
                     document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
-                    onresize = (event) => {
+                    let resize = (event) => {
                         let elem = document.getElementById('c1');
                         document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
                     };
+                    window.addEventListener('resize', resize);
                 </script>
                 <div class="socials footer-card">
                     <div onclick="window.open('https://github.com/cybercrew')" class="socials-circle clickable"><img
