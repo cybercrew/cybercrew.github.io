@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=JetBrains+Mono&family=Quicksand&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Jetbrains Mono'
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.headerButton {
+    font-family: 'Jetbrains Mono';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #4c576b;
+    color: white;
+    height: 2.8rem;
+    width: 7rem;
+    transition-duration: 300ms;
+}
+
+.headerButton:hover {
+    border-radius: 1rem;
+    background-color: #3a4353;
+}
+
+.p1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    height: 30rem;
+    width: auto;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+.textContainer p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.typed {
+    color: rgb(207, 28, 223);
+}
+
+.p2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c1 {
+    font-family: 'Quicksand';
+    background-color: #3c43526b;
+    color: white;
+    text-wrap: pretty;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    width: 96vw;
+    backdrop-filter: blur(5px);
+    min-height: 15rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.c1 h1 {
+    text-align: center;
+}
+
+.c2 {
+    margin: 1rem;
+    font-family: 'Quicksand';
+    background-color: #3c43526b;
+    color: white;
+    text-wrap: pretty;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    width: 96vw;
+    backdrop-filter: blur(5px);
+    min-height: 18rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading {
+    height: 8rem;
+    width: auto;
+}
+
+.footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-card {
+    margin: 1vw;
+    margin-top: 0;
+    height: 10rem;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3c43526b;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(5px);
+}
+
+.socials-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: #3c4352;
+    border-radius: 100%;
+    height: 5rem;
+    width: 5rem;
+    box-shadow: 0 0 5px 0px #080b13;
+    transition-duration: 300ms;
+}
+
+.socials-circle:hover {
+    box-shadow: 0 0 3px 0px #080b13;
+    scale: 1.1;
+}
+
+.socials-circle img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.school {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #161c28;
+    border-radius: 0.6rem;
+    color: white;
+    width: 90%;
+    transition-duration: 200ms;
+}
+
+.school:hover {
+    background-color: #0b0e14;
+}
+
+.school img {
+    height: 6rem;
+    width: 6rem;
+    margin: 1rem;
+}
+
+.school p {
+    margin: 0.5rem;
+    font-size: 0.9rem
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.contact .text {
+    font-size: 0.9rem;
+    color: white;
+    margin: 1.5rem;
+    font-family: 'Quicksand';
+}
+
+.x img {
+    height: 2.3rem;
+    width: 2.3rem;
+}
+
+@media screen and (max-width: 800px) {
+    .school-container {
+        display: none;
+    }
+
+    .c1 {
+        width: 89vw;
+    }
+
+    .c2 {
+        width: 89vw;
+    }
+
+    .footer-card {
+        width: 47vw;
+    }
+
+    .contact .text {
+        margin: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .socials-circle img {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .socials-circle {
+        margin: 0.4rem;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .x img {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .logo {
+        height: 80%;
+
+    }
+
+    .textContainer p {
+        margin-top: -10vh;
+        font-size: 1rem;
+    }
+}

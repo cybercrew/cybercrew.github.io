@@ -1,129 +1,80 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>CyberCrew | The I.T. Club of DPS Srinagar</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./files/style.css" type="text/css">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <meta name="og:title" content="CyberCrew">
-    <meta name="og:description" content="The CyberCrew is the I.T. Club of DPS Srinagar.">
-    <meta name="og:image" content="./files/assets/CyberCrew.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <script src="./scripts/three.min.js"></script>
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/typed.min.js"></script>
+
+    <script src="./scripts/background.js"></script>
+    <script src="./scripts/functions.js"></script>
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <title>CyberCrew | DPSSGR</title>
 </head>
 
 <body>
-    <script src="./files/deps/three.min.js"></script>
-    <script src="./files/deps/jquery.min.js"></script>
-    <script src="./files/deps/typed.min.js"></script>
-    <script src="./files/script.js"></script>
-    <div class="headerContainer">
-        <div class="btnContainer">
-            <button class="headerBtn" onclick="window.location.assign('./about.html')">About</button>
+    <div class="header">
+        <button class="headerButton clickable" onclick="scrollToAbout()">About</button>
+        <button class="headerButton clickable">Articles</button>
+        <button class="headerButton clickable">TechKnow</button>
+    </div>
+    <div class="p1">
+        <div class="logoContainer">
+            <img src="./assets/cclogo.png" alt="CyberCrew Logo" class="logo">
         </div>
-        <div class="btnContainer">
-            <button class="headerBtn" onclick="window.location.assign('./articles.html')">Articles</button>
-        </div>
-        <div class="btnContainer">
-            <button class="headerBtn"
-                onclick="window.location.assign('https://techknow.dpssrinagar.com/')">TechKnow</button>
+        <div class="textContainer">
+            <p>We do <span class="typed" id="typed"></span></p>
+            <script src="./scripts/typed.js"></script>
         </div>
     </div>
-    <div class="logoContainer">
-        <div class="image">
-            <img src="./files/assets/cclogo.png" alt="CyberCrew Logo">
+    <div class="p2">
+        <div id="c1" class="c1">
+            <h1>The Crew</h1>
+            <p>
+                The CyberCrew is the IT Club of DPS Srinagar. It was founded in 2013, with an aim to provide a
+                platform to the students of Kashmir to share and showcase their knowledge and skills. CyberCrew is
+                famous for organising an annual event, TechKnow, which is the only IT related mega-event for schools in
+                Jammu
+                and Kashmir. We at the CyberCrew communicate using a language that only we decipher best. The
+                CyberCrew provides an opportunity for all the IT fanatics of the school to take their first step
+                towards realizing their dream of deciphering computers. The best part of it all is that we provide you
+                with
+                a
+                beginning in learning IT at home i.e, in our own school.
+            </p>
         </div>
-        <div class="descContainer">
-            <div class="desc">
-                <span><span id="wedothis">We do</span>&nbsp<p id="changingText" class=changingText></p>
-                </span>
-            </div>
-        </div>
-        <script>
-            var typed = new Typed("#changingText", {
-                strings: ["Web Development", "Progamming", "Robotics", "Video Editing"],
-                typeSpeed: 40,
-                backSpeed: 40,
-                loop: true
-            });
-        </script>
-    </div>
-    <div class="contentContainer">
-        <div class="whatWeDo">
-            <h1 class="whatHead">The Crew</h1>
-            <div class="whatText">
-                <p>The CyberCrew is the IT Club of DPS Srinagar. It was founded in 2013, with an aim to provide a
-                    platform to the students of Kashmir to share and showcase their knowledge and skills. CyberCrew is
-                    famous for
-                    organising an annual event, TechKnow, which is the only IT related mega-event for schools in Jammu
-                    and Kashmir. We at the CyberCrew communicate using a language that only we decipher best. The
-                    CyberCrew provides an opportunity for all the IT fanatics of the school to take their first step
-                    towards realizing
-                    their dream of deciphering computers. The best part of it all is that we provide you with a
-                    beginning in learning IT at home i.e, in our own school.</p>
-            </div>
-        </div>
-        <div id="articles" class="articles">
-            <div class="headingContainer">
-                <h1 class="articlesHead">Recent Articles</h1>
-            </div>
-            <div class="columns">
-                <script>
-                    function getElement(id) {
-                        return document.getElementById(id);
-                    }
-                    let data
-                    fetch('https://backend-ddu1.onrender.com/articles')
-                        .then(res => res.json())
-                        .then((dat) => {
-                            data = dat
-                            getElement('title1').innerHTML = dat[0].title;
-                            getElement('img1').src = dat[0].imgUrl;
-                            getElement('title2').innerHTML = dat[1].title;
-                            getElement('img2').src = dat[1].imgUrl;
-                            getElement('title3').innerHTML = dat[2].title;
-                            getElement('img3').src = dat[2].imgUrl;
-                        })
-                        .catch(err => {
-                            console.log(err)
-                            getElement('title1').innerHTML = "Failed to Load";
-                            getElement('title2').innerHTML = "Failed to Load";
-                            getElement('title3').innerHTML = "Failed to Load";
-                        });
-                </script>
-                <div onclick="window.location.assign('./articlePage.html#'+data[0].title.split(' ').join(''))"
-                    class="col">
-                    <img id="img1" src="./files/assets/CyberCrew.png">
-                    <h1 id="title1" style="text-align:center;">Loading...</h1>
-                </div>
-                <div onclick="window.location.assign('./articlePage.html#'+data[1].title.split(' ').join(''))"
-                    class="col">
-                    <img id="img2" src="./files/assets/CyberCrew.png">
-                    <h1 id="title2" style="text-align:center;">Loading...</h1>
-                </div>
-                <div onclick="window.location.assign('./articlePage.html#'+data[2].title.split(' ').join(''))"
-                    class="col">
-                    <img id="img3" src="./files/assets/CyberCrew.png">
-                    <h1 id="title3" style="text-align:center;">Loading...</h1>
-                </div>
+        <div class="c2">
+            <h1>Articles</h1>
+            <div class="articleContainer">
+                <img class="loading" src="./assets/loading.svg">
             </div>
         </div>
         <div class="footer">
-            <div class="buttons">
-                <button class="button"><img src="./files/assets/facebook.png"></button>
-                <button class="button"><img class="twbtn" src="./files/assets/twitter.png"></button>
-                <button class="button" onclick="window.open('http://github.com/cybercrew')"><img class="githubbtn"
-                        src="./files/assets/github.png"></button>
+            <div class="socials footer-card">
+                <div onclick="window.open('https://github.com/cybercrew')" class="socials-circle clickable"><img
+                        src="./assets/github.svg"></div>
+                <div onclick="window.open('https://www.facebook.com/dpscybercrew/')" class="socials-circle clickable">
+                    <img src="./assets/facebook.svg">
+                </div>
+                <div class="socials-circle clickable x"><img src="./assets/x.svg">
+                </div>
             </div>
-            <div class="schoolWeb" onclick="window.open('http://dpssrinagar.com')">
-                <div class="visitSchool">
-                    <img src="./files/assets/dpslogo.png">
+            <div class="school-container footer-card">
+                <div class="school clickable">
+                    <img src="./assets/dpslogo.png" alt="DPS Srinagar Logo">
                     <p>Visit School Website</p>
                 </div>
             </div>
-            <div class="contactInfo">
-                <h1>Contact Us</h1>
-                <br>
-                <p>Phone: +91-0123456789</p>
-                <p>Email: example@dpssrinagar.com</p>
+            <div class="contact footer-card">
+                <div class="text">
+                    <h1>Contact</h1>
+                    <p>Phone: +91 1234567890</p>
+                    <p>Email: placeholder@example.com</p>
+                </div>
             </div>
         </div>
     </div>

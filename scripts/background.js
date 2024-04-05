@@ -13,11 +13,12 @@ function init() {
     onresize = (event) => {
         renderer.setSize(window.innerWidth, window.innerHeight);
     };
-
+    renderer.domElement.className = 'background';
     // The colours are in hex format but here the "#" is replaced with "0x". Eg: '#1F2833' becomes '0x1F2833'
-
     renderer.setClearColor(0x0e1525) // <-- This here is the background color for the background animation
-    document.body.appendChild(renderer.domElement);
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.body.appendChild(renderer.domElement);
+    });
 }
 
 
@@ -71,4 +72,3 @@ function render() {
 init();
 addSphere();
 render();
-
