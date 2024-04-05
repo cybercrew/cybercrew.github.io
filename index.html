@@ -32,48 +32,62 @@
         </div>
     </div>
     <div class="p2">
-        <div id="c1" class="c1">
-            <h1>The Crew</h1>
-            <p>
-                The CyberCrew is the IT Club of DPS Srinagar. It was founded in 2013, with an aim to provide a
-                platform to the students of Kashmir to share and showcase their knowledge and skills. CyberCrew is
-                famous for organising an annual event, TechKnow, which is the only IT related mega-event for schools in
-                Jammu
-                and Kashmir. We at the CyberCrew communicate using a language that only we decipher best. The
-                CyberCrew provides an opportunity for all the IT fanatics of the school to take their first step
-                towards realizing their dream of deciphering computers. The best part of it all is that we provide you
-                with
-                a
-                beginning in learning IT at home i.e, in our own school.
-            </p>
-        </div>
-        <div class="c2">
-            <h1>Articles</h1>
-            <div class="articleContainer">
-                <img class="loading" src="./assets/loading.svg">
+        <div class="wrapper">
+            <div id="c1" class="c1">
+                <h1>The Crew</h1>
+                <p>
+                    The CyberCrew is the IT Club of DPS Srinagar. It was founded in 2013, with an aim to provide a
+                    platform to the students of Kashmir to share and showcase their knowledge and skills. CyberCrew is
+                    famous for organising an annual event, TechKnow, which is the only IT related mega-event for schools
+                    in
+                    Jammu
+                    and Kashmir. We at the CyberCrew communicate using a language that only we decipher best. The
+                    CyberCrew provides an opportunity for all the IT fanatics of the school to take their first step
+                    towards realizing their dream of deciphering computers. The best part of it all is that we provide
+                    you
+                    with
+                    a
+                    beginning in learning IT at home i.e, in our own school.
+                </p>
             </div>
-        </div>
-        <div class="footer">
-            <div class="socials footer-card">
-                <div onclick="window.open('https://github.com/cybercrew')" class="socials-circle clickable"><img
-                        src="./assets/github.svg"></div>
-                <div onclick="window.open('https://www.facebook.com/dpscybercrew/')" class="socials-circle clickable">
-                    <img src="./assets/facebook.svg">
-                </div>
-                <div class="socials-circle clickable x"><img src="./assets/x.svg">
+            <div class="c2">
+                <h1>Articles</h1>
+                <div class="articleContainer">
+                    <img class="loading" src="./assets/loading.svg">
                 </div>
             </div>
-            <div class="school-container footer-card">
-                <div class="school clickable">
-                    <img src="./assets/dpslogo.png" alt="DPS Srinagar Logo">
-                    <p>Visit School Website</p>
+            <div class="footer" id="footer">
+                <script>
+                    //I have no idea why this is not getting the full width, so for now i used this workaround
+                    let elem = document.getElementById('c1');
+                    document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
+                    onresize = (event) => {
+                        let elem = document.getElementById('c1');
+                        document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
+                    };
+                </script>
+                <div class="socials footer-card">
+                    <div onclick="window.open('https://github.com/cybercrew')" class="socials-circle clickable"><img
+                            src="./assets/github.svg"></div>
+                    <div onclick="window.open('https://www.facebook.com/dpscybercrew/')"
+                        class="socials-circle clickable">
+                        <img src="./assets/facebook.svg">
+                    </div>
+                    <div class="socials-circle clickable x"><img src="./assets/x.svg">
+                    </div>
                 </div>
-            </div>
-            <div class="contact footer-card">
-                <div class="text">
-                    <h1>Contact</h1>
-                    <p>Phone: +91 1234567890</p>
-                    <p>Email: placeholder@example.com</p>
+                <div class="school-container footer-card">
+                    <div class="school clickable">
+                        <img src="./assets/dpslogo.png" alt="DPS Srinagar Logo">
+                        <p>Visit School Website</p>
+                    </div>
+                </div>
+                <div class="contact footer-card">
+                    <div class="text">
+                        <h1>Contact</h1>
+                        <p>Phone: +91 1234567890</p>
+                        <p>Email: placeholder@example.com</p>
+                    </div>
                 </div>
             </div>
         </div>
