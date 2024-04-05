@@ -241,7 +241,7 @@ body {
 
     .contact .text {
         margin: 0.5rem;
-        font-size: 0.7rem;
+        font-size: 0.67rem;
     }
 
     .socials-circle img {
@@ -250,9 +250,10 @@ body {
     }
 
     .socials-circle {
-        margin: 0.4rem;
+        margin: 3px;
         height: 50px;
         width: 50px;
+        scale: 0.86;
     }
 
     .x img {
