@@ -140,7 +140,7 @@ body {
 }
 
 .footer-card {
-    margin: 1vw;
+    margin: 1.7vw 0.85vw 1.7vw 0.85vw;
     margin-top: 0;
     height: 10rem;
     width: 30vw;
@@ -227,15 +227,15 @@ body {
     }
 
     .c1 {
-        width: 89vw;
+        width: 90vw;
     }
 
     .c2 {
-        width: 89vw;
+        width: 90vw;
     }
 
     .footer-card {
-        width: 47vw;
+        width: 50vw;
         height: 7rem;
     }
 
@@ -245,8 +245,8 @@ body {
     }
 
     .socials-circle img {
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 25px;
+        width: 25px;
     }
 
     .socials-circle {
@@ -256,8 +256,8 @@ body {
     }
 
     .x img {
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 25px;
+        width: 25px;
     }
 
     .logo {
