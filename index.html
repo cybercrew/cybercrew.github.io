@@ -52,13 +52,38 @@
             </div>
             <div class="c2">
                 <h1>Articles</h1>
-                <div class="articleContainer">
+                <div class="articleContainer" id="articleContainer">
+                    <script>
+                        fetch("https://backend-ddu1.onrender.com/articles")
+
+                            .then(res => res.json())
+                            .then(data => {
+                                document.getElementById('articleContainer').innerHTML = "";
+                                let i = 0;
+                                for (let art of data) {
+                                    if (i > 3) break;
+                                    let article = document.createElement("div");
+                                    article.setAttribute('onclick', `window.location.assign(".")`);
+                                    article.id = "art";
+                                    article.className = "art clickable";
+                                    article.innerHTML = `
+                                    <div class="artImage" id="artimg ${art.title.split(' ').join('_')}">
+                                    </div>
+                                    <p class="artTitle">${art.title}</p>
+                                    `;
+                                    document.getElementById("articleContainer").appendChild(article);
+                                    i++
+                                    document.getElementById("artimg " + art.title.split(' ').join('_')).style.backgroundImage = `url("${art.imgUrl}")`;
+                                }
+                            })
+                    </script>
                     <img class="loading" src="./assets/loading.svg">
                 </div>
             </div>
             <div class="footer" id="footer">
                 <script>
                     //I have no idea why this is not getting the full width, so for now i used this workaround
+                    // TODO: Fix this
                     let elem = document.getElementById('c1');
                     document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
                     let resize = (event) => {
