@@ -282,8 +282,8 @@ body {
     transition-duration: 300ms;
     margin: 1rem;
     border-radius: 1rem;
-    width: 350px;
-    height: 250px;
+    width: 305px;
+    height: 205px;
     background-color: #323b4d;
 }
 
@@ -338,6 +338,6 @@ body {
     }
 
     .footer {
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
