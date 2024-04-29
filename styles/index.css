@@ -282,12 +282,17 @@ body {
     transition-duration: 300ms;
     margin: 1rem;
     border-radius: 1rem;
-    width: 305px;
-    height: 205px;
+    width: 420px;
+    height: 240px;
     background-color: #323b4d;
 }
 
 @media screen and (max-width: 800px) {
+    .art {
+        width: 305px;
+        height: 205px;
+    }
+
     .logoContainer {
         height: 350px;
     }
