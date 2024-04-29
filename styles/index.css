@@ -287,6 +287,39 @@ body {
     background-color: #323b4d;
 }
 
+.articleContainer-bpage {
+    min-height: 90vh;
+    min-width: 97vw;
+    height: 100%;
+    margin: 1rem;
+    background-color: #3c43526b;
+    border-radius: 0.6rem;
+    backdrop-filter: blur(5px);
+}
+
+.articleCover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+}
+
+.articleTitle {
+    color: white;
+    text-shadow: 0 0 5px #000000;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 90%;
+}
+
+.articleContent {
+    text-wrap: pretty;
+    color: white;
+    margin: 1rem;
+}
+
 @media screen and (max-width: 800px) {
     .art {
         width: 305px;

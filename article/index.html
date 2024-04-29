@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
-    <script src="../scripts/three.min.js"></script>
-    <script src="../scripts/jquery.min.js"></script>
-    <script src="../scripts/typed.min.js"></script>
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+    <script src="./scripts/three.min.js"></script>
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/typed.min.js"></script>
 
-    <script src="../scripts/background.js"></script>
-    <script src="../scripts/functions.js"></script>
-    <script src="../scripts/articles.js"></script>
-    <link rel="stylesheet" href="../styles/index.css">
+    <script src="./scripts/background.js"></script>
+    <script src="./scripts/functions.js"></script>
+    <script src="./scripts/articles.js"></script>
+    <link rel="stylesheet" href="./styles/index.css">
 
     <title>CyberCrew | DPSSGR</title>
 </head>
@@ -20,15 +20,30 @@
 <body>
     <div class="header">
         <button class="headerButton clickable" onclick="window.location.href='..'">Home</button>
-        <button class="headerButton clickable" onclick="window.location.href='.'">Articles</button>
+        <button class="headerButton clickable" onclick="window.location.href='../articles'">Articles</button>
         <button class="headerButton clickable">TechKnow</button>
     </div>
     <script>
-        articles()
+        let params = new URLSearchParams(window.location.search);
+        let articleName = params.get("title")
+        fetch('https://backend-ddu1.onrender.com/articles')
+            .then(response => response.json())
+            .then(data => {
+                let article = data.find((article) => article.title.split(" ").join("_") == articleName);
+                let articleContainer = document.getElementById('articles');
+                console.log(article)
+                articleContainer.innerHTML = `
+                <div class="articleCover" id="artCover" style="background-image: url(${article.imgUrl});border-top-left-radius:0.6rem;border-top-right-radius: 0.6rem;">
+                <h1 id="articleTitle" class="articleTitle">${article.title}</h1>
+                </div>
+                <div class="articleContent">
+                <div id="articleContent">${article.content}</div>
+                </div>
+                `;
+            });
     </script>
     <div class="p2">
-        <div id="artContainer" class="articleContainer-apage">
-            <h1 class="articleHeading-apage">Articles</h1>
+        <div id="artContainer-bpage" class="articleContainer-bpage">
             <div class="articles-apage" id="articles">
                 <img class="loading" src="../assets/loading.svg">
             </div>
@@ -38,27 +53,27 @@
                 <script>
                     //I have no idea why this is not getting the full width, so for now i used this workaround
                     // TODO: Fix this
-                    let elem = document.getElementById('artContainer');
+                    let elem = document.getElementById('artContainer-bpage');
                     document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
                     let resize = (event) => {
-                        let elem = document.getElementById('artContainer');
+                        let elem = document.getElementById('artContainer-bpage');
                         document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
                     };
                     window.addEventListener('resize', resize);
                 </script>
                 <div class="socials footer-card">
                     <div onclick="window.open('https://github.com/cybercrew')" class="socials-circle clickable"><img
-                            src="../assets/github.svg"></div>
+                            src="./assets/github.svg"></div>
                     <div onclick="window.open('https://www.facebook.com/dpscybercrew/')"
                         class="socials-circle clickable">
-                        <img src="../assets/facebook.svg">
+                        <img src="./assets/facebook.svg">
                     </div>
-                    <div class="socials-circle clickable x"><img src="../assets/x.svg">
+                    <div class="socials-circle clickable x"><img src="./assets/x.svg">
                     </div>
                 </div>
                 <div class="school-container footer-card">
                     <div class="school clickable">
-                        <img src="../assets/dpslogo.png" alt="DPS Srinagar Logo">
+                        <img src="./assets/dpslogo.png" alt="DPS Srinagar Logo">
                         <p>Visit School Website</p>
                     </div>
                 </div>
