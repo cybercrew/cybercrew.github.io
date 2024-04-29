@@ -6,7 +6,12 @@ function articles() {
             document.getElementById('articles').innerHTML = "";
             for (let art of data) {
                 let article = document.createElement("div");
-                article.setAttribute('onclick', `window.location.assign("../article?title=${art.title.split(' ').join('_')}")`);
+                if (art.tags.includes("youtube")) {
+                    article.setAttribute('onclick', `window.location.assign("${art.ytUrl}")`);
+                }
+                else {
+                    article.setAttribute('onclick', `window.location.assign("../article?title=${art.title.split(' ').join('_')}")`);
+                }
                 article.id = "art";
                 article.className = "art clickable";
                 article.innerHTML = `
