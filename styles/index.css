@@ -235,6 +235,7 @@ body {
     margin: 1rem;
     background-color: #3c43526b;
     border-radius: 0.6rem;
+    backdrop-filter: blur(5px);
 }
 
 .articleHeading-apage {
