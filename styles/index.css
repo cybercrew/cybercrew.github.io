@@ -336,6 +336,11 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+    .blackWrapper {
+        height: 100%;
+        top: -11.6%;
+    }
+
     .header {
         margin: 0.5rem 1rem 0 1rem;
     }
@@ -345,7 +350,7 @@ body {
     }
 
     .articleTitle {
-        font-size: 35px;
+        font-size: 20px;
     }
 
     .articleContainer-bpage {
