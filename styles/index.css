@@ -288,6 +288,10 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+    .logoContainer {
+        height: 350px;
+    }
+
     .school-container {
         display: none;
     }
