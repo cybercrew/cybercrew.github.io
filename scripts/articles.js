@@ -6,7 +6,7 @@ function articles() {
             document.getElementById('articles').innerHTML = "";
             for (let art of data) {
                 let article = document.createElement("div");
-                article.setAttribute('onclick', `window.location.assign("../article.html?title=${art.title.split(' ').join('_')}")`);
+                article.setAttribute('onclick', `window.location.assign("../article?title=${art.title.split(' ').join('_')}")`);
                 article.id = "art";
                 article.className = "art clickable";
                 article.innerHTML = `
