@@ -289,7 +289,7 @@ body {
 
 .articleContainer-bpage {
     min-height: 90vh;
-    width: 70vw;
+    width: 94vw;
     height: 100%;
     margin: 1rem;
     background-color: #3c43526b;
@@ -316,6 +316,7 @@ body {
 }
 
 .articleContent {
+    width: 75%;
     text-wrap: pretty;
     color: white;
     margin: 1rem;
