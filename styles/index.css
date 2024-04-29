@@ -289,7 +289,7 @@ body {
 
 .articleContainer-bpage {
     min-height: 90vh;
-    min-width: 97vw;
+    width: 70vw;
     height: 100%;
     margin: 1rem;
     background-color: #3c43526b;
@@ -301,13 +301,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 60vh;
+    height: 30vh;
     width: 100%;
 }
 
 .articleTitle {
     color: white;
-    text-shadow: 0 0 5px #000000;
+    text-shadow: 0 0 6px #000000;
     text-align: center;
     margin: 0;
     position: relative;
@@ -318,6 +318,8 @@ body {
     text-wrap: pretty;
     color: white;
     margin: 1rem;
+    margin-top: 2rem;
+    padding-inline: 2rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -330,7 +332,16 @@ body {
     }
 
     .articleTitle {
-        font-size: 18px;
+        font-size: 35px;
+    }
+
+    .articleContainer-bpage {
+        width: 95vw;
+    }
+
+    .articleContent {
+        margin-top: 100px;
+        padding-inline: 10px;
     }
 
     .art {
