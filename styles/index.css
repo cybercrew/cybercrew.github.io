@@ -324,11 +324,10 @@ body {
 }
 
 .blackWrapper {
+    position: absolute;
     background-color: black;
     width: 100%;
-    height: 101%;
-    position: relative;
-    top: -17%;
+    height: 30vh;
     border-top-left-radius: 0.6rem;
     border-top-right-radius: 0.6rem;
     opacity: 0.3;
@@ -336,11 +335,6 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-    .blackWrapper {
-        height: 100%;
-        top: -11.6%;
-    }
-
     .header {
         margin: 0.5rem 1rem 0 1rem;
     }
@@ -350,7 +344,8 @@ body {
     }
 
     .articleTitle {
-        font-size: 20px;
+        top: 84%;
+        font-size: 18px;
     }
 
     .articleContainer-bpage {
