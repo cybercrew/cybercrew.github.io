@@ -336,13 +336,14 @@ body {
 }
 
 table {
+    border-style: none;
+    table-layout: auto;
     width: 100%;
     overflow-x: auto;
     box-sizing: border-box;
     display: block;
 }
 
-table,
 th,
 td {
     border: 1px solid #fffcfc;
@@ -353,6 +354,7 @@ td {
     padding-left: 1ch;
     padding-right: 1ch;
 }
+
 
 @media screen and (max-width: 800px) {
     ::-webkit-scrollbar {
