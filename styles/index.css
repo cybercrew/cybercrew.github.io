@@ -191,7 +191,16 @@ body {
     border-radius: 0.6rem;
     color: white;
     width: 90%;
+    height: 80%;
     transition-duration: 200ms;
+}
+
+.schoolWrapper {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .school:hover {
