@@ -150,6 +150,7 @@ body {
     margin-top: 0;
     height: 10rem;
     width: 30vw;
+    max-width: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
