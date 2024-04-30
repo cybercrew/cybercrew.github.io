@@ -335,6 +335,13 @@ body {
     z-index: 1;
 }
 
+table {
+    width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+    display: block;
+}
+
 table,
 th,
 td {
