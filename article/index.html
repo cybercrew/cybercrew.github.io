@@ -3,16 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta property="og:title" content="Default Title">
     <script>
         let urlparams = new URLSearchParams(window.location.search);
         let articleTitle = params.get("title")
-        const metaTitle = articleTitle.split("_").join(" ");
-        const titleMeta = document.createElement('meta');
-        titleMeta.setAttribute('name', 'title');
-        titleMeta.setAttribute('content', metaTitle);
-
-        const head = document.querySelector('head');
-        head.appendChild(titleMeta);
+        let metaTitle = articleTitle.split("_").join(" ");
+        let ogTitleMeta = document.querySelector('meta[property="og:title"]');
+        ogTitleMeta.setAttribute('content', metaTitle);
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
