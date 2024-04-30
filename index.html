@@ -65,8 +65,8 @@
                             .then(res => res.json())
                             .then(data => {
                                 document.getElementById('articleContainer').innerHTML = "";
-                                let onlyThree = data.splice(3)
-                                for (let art of onlyThree) {
+                                data.splice(3)
+                                for (let art of data) {
                                     let article = document.createElement("div");
                                     if (art.tags.includes("youtube")) {
                                         article.setAttribute('onclick', `window.location.assign("${art.ytUrl}")`);
