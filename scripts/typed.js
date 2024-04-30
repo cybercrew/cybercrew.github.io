@@ -1,9 +1,10 @@
 var typed = new Typed("#typed", {
     strings: [
         "Web Development",
-        "Python",
+        "App Development",
+        "Programming",
         "Robotics",
-        "Graphics Design",
+        "Graphic Design",
         "AI",
         "Game Development",
         "Digital Marketing"
