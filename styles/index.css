@@ -95,6 +95,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 95%;
+    max-width: 2350px;
 }
 
 .c1 {
