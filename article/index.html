@@ -3,6 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
+    <script>
+        let urlparams = new URLSearchParams(window.location.search);
+        let articleTitle = params.get("title")
+        const metaTitle = articleTitle.split("_").join(" ");
+        const titleMeta = document.createElement('meta');
+        titleMeta.setAttribute('name', 'title');
+        titleMeta.setAttribute('content', metaTitle);
+
+        const head = document.querySelector('head');
+        head.appendChild(titleMeta);
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/favicon.png" type="image/x-icon">
     <script src="../scripts/three.min.js"></script>
@@ -41,14 +52,6 @@
                 <div id="articleContent">${article.content}</div>
                 </div>
                 `;
-                const metaTitle = article.title;
-
-                const titleMeta = document.createElement('meta');
-                titleMeta.setAttribute('name', 'title');
-                titleMeta.setAttribute('content', metaTitle);
-
-                const head = document.querySelector('head');
-                head.appendChild(titleMeta);
             });
     </script>
     <div class="p2">
