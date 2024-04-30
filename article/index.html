@@ -42,6 +42,39 @@
                 <div id="articleContent">${article.content}</div>
                 </div>
                 `;
+                let meta = document.createElement('meta');
+                meta.name = "description";
+                meta.content = article.description;
+                document.head.appendChild(meta);
+                let meta2 = document.createElement('meta');
+                meta2.name = "keywords";
+                meta2.content = article.keywords;
+                document.head.appendChild(meta2);
+                let meta3 = document.createElement('meta');
+                meta3.name = "author";
+                meta3.content = "CyberCrew";
+                document.head.appendChild(meta3);
+                let meta4 = document.createElement('meta');
+                meta4.name = "og:title";
+                meta4.content = article.title;
+                document.head.appendChild(meta4);
+                let meta5 = document.createElement('meta');
+                meta5.name = "og:description";
+                meta5.content = article.description;
+                document.head.appendChild(meta5);
+                let meta6 = document.createElement('meta');
+                meta6.name = "og:image";
+                meta6.content = article.imgUrl;
+                document.head.appendChild(meta6);
+                let meta7 = document.createElement('meta');
+                meta7.name = "og:url";
+                meta7.content = window.location.href;
+                document.head.appendChild(meta7);
+                let meta8 = document.createElement('meta');
+                meta8.name = "og:site_name";
+                meta8.content = "CyberCrew";
+                document.head.appendChild(meta9);
+
             });
     </script>
     <div class="p2">
