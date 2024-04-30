@@ -52,7 +52,7 @@ function animate() {
 
         dot = dots[i];
 
-        dot.position.z += i / 4;
+        dot.position.z += i / 20;
 
         if (dot.position.z > 1000) dot.position.z -= 2000;
 
