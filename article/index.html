@@ -37,7 +37,7 @@
                 let articleContainer = document.getElementById('articles');
                 articleContainer.innerHTML = `
                 <div class="articleCover" id="artCover" style="background-image: url(${article.imgUrl});border-top-left-radius:0.6rem;border-top-right-radius: 0.6rem;">
-                <div class="blackWrapper" id="blackWrapper"></div>
+                <div class="blackWrapper" id="blackWrapper" style="width:${document.getElementById("artContainer-bpage").offsetWidth}px"></div>
                 <h1 id="articleTitle" class="articleTitle">${article.title}</h1>
                 </div>
                 <div class="articleContent">
@@ -68,7 +68,6 @@
                     // TODO: Fix this
                     let elem = document.getElementById('artContainer-bpage');
                     document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
-                    document.getElementById('blackWrapper').style.width = `${elem.offsetWidth}px`;
                     let resize = (event) => {
                         let elem = document.getElementById('artContainer-bpage');
                         document.getElementById('footer').style.width = `${elem.offsetWidth}px`;
