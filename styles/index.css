@@ -99,13 +99,12 @@ body {
 
 .c1 {
     font-family: 'Quicksand';
-    background-color: #3c43526b;
+    background-color: #212837;
     color: white;
     text-wrap: pretty;
     border-radius: 0.6rem;
     padding: 1rem;
     width: 100%;
-    backdrop-filter: blur(5px);
     min-height: 15rem;
     height: 100%;
     display: flex;
@@ -120,13 +119,12 @@ body {
 .c2 {
     margin: 1rem 0 1rem 0;
     font-family: 'Quicksand';
-    background-color: #3c43526b;
+    background-color: #212837;
     color: white;
     text-wrap: pretty;
     border-radius: 0.6rem;
     padding: 1rem;
     width: 100%;
-    backdrop-filter: blur(5px);
     min-height: 18rem;
     height: 100%;
     display: flex;
@@ -154,10 +152,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3c43526b;
+    background-color: #212837;
     border-radius: 0.6rem;
     margin-bottom: 1rem;
-    backdrop-filter: blur(5px);
 }
 
 .socials-circle {
@@ -242,9 +239,8 @@ body {
     min-width: 97vw;
     height: 100%;
     margin: 1rem;
-    background-color: #3c43526b;
+    background-color: #212837;
     border-radius: 0.6rem;
-    backdrop-filter: blur(5px);
 }
 
 .articleHeading-apage {
