@@ -65,9 +65,8 @@
                             .then(res => res.json())
                             .then(data => {
                                 document.getElementById('articleContainer').innerHTML = "";
-                                let i = 0;
-                                for (let art of data) {
-                                    if (i > 3) break;
+                                let onlyThree = data.splice(3)
+                                for (let art of onlyThree) {
                                     let article = document.createElement("div");
                                     if (art.tags.includes("youtube")) {
                                         article.setAttribute('onclick', `window.location.assign("${art.ytUrl}")`);
@@ -83,7 +82,6 @@
                                     <p class="artTitle">${art.title}</p>
                                     `;
                                     document.getElementById("articleContainer").appendChild(article);
-                                    i++
                                     document.getElementById("artimg " + art.title.split(' ').join('_')).style.backgroundImage = `url("${art.imgUrl}")`;
                                 }
                             })
