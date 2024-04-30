@@ -32,7 +32,6 @@
             .then(data => {
                 let article = data.find((article) => article.title.split(" ").join("_") == articleName);
                 let articleContainer = document.getElementById('articles');
-                console.log(article)
                 articleContainer.innerHTML = `
                 <div class="articleCover" id="artCover" style="background-image: url(${article.imgUrl});border-top-left-radius:0.6rem;border-top-right-radius: 0.6rem;">
                 <div class="blackWrapper"></div>
@@ -42,41 +41,14 @@
                 <div id="articleContent">${article.content}</div>
                 </div>
                 `;
-                let meta = document.createElement('meta');
-                meta.name = "description";
-                meta.content = article.description;
-                document.head.appendChild(meta);
+                const metaTitle = article.title;
 
-                let meta2 = document.createElement('meta');
-                meta2.name = "author";
-                meta2.content = "CyberCrew";
-                document.head.appendChild(meta2);
+                const titleMeta = document.createElement('meta');
+                titleMeta.setAttribute('name', 'title');
+                titleMeta.setAttribute('content', metaTitle);
 
-                let meta3 = document.createElement('meta');
-                meta3.name = "og:title";
-                meta3.content = article.title;
-                document.head.appendChild(meta3);
-
-                let meta4 = document.createElement('meta');
-                meta4.name = "og:description";
-                meta4.content = article.description;
-                document.head.appendChild(meta4);
-
-                let meta5 = document.createElement('meta');
-                meta5.name = "og:image";
-                meta5.content = article.imgUrl;
-                document.head.appendChild(meta5);
-
-                let meta6 = document.createElement('meta');
-                meta6.name = "og:url";
-                meta6.content = window.location.href;
-                document.head.appendChild(meta6);
-
-                let meta7 = document.createElement('meta');
-                meta7.name = "og:site_name";
-                meta7.content = "CyberCrew";
-                document.head.appendChild(meta7);
-
+                const head = document.querySelector('head');
+                head.appendChild(titleMeta);
             });
     </script>
     <div class="p2">
