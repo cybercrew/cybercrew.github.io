@@ -237,8 +237,9 @@ body {
 }
 
 .articleContainer-apage {
-    min-height: 90vh;
-    min-width: 97vw;
+    min-height: 95vh;
+    width: 97vw;
+    max-width: 2440px;
     height: 100%;
     margin: 1rem;
     background-color: #212837;
@@ -295,8 +296,9 @@ body {
 }
 
 .articleContainer-bpage {
-    min-height: 90vh;
+    min-height: 95vh;
     width: 94vw;
+    max-width: 2440px;
     height: 100%;
     margin: 1rem;
     background-color: #212837;
