@@ -597,7 +597,8 @@ td {
     font-size: 5vw;
 }
 }
-@media (max-width:500px) {
+@media (max-width:500px) 
+{
     .blue
 {
     font-size: 9vw;
