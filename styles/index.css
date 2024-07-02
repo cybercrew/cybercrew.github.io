@@ -609,4 +609,7 @@ td {
     padding-right: 0 !important;
     margin-left: 15px;
 }
+.dropdown-content {
+    transform: translate(-50%,0%);
+  }
 }
