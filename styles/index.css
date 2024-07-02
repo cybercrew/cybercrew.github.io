@@ -610,16 +610,10 @@ td {
     padding-right: 0 !important;
     margin-left: 15px;
 }
-@keyframes slidein1
-{
-  0%{transform: translate(0,0);}
-  100%{transform: translate(-70vh,0);}
-}
-.dropdown-content {
-    animation-name: slidein1;
-    animation-duration: 10ms;
-    animation-delay: 0;
-
+  .dropdown-content
+  {
+    transform: translate(-40vw,0);
+    
   }
 
 }
