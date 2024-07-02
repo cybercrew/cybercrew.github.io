@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=JetBrains+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=JetBrains+Mono&family=Quicksand&display=swap');
@@ -431,7 +432,7 @@ td {
         margin: 3px;
         height: 50px;
         width: 50px;
-        scale: 0.86;
+       scale: 0.86;
     }
 
     .x img {
@@ -452,4 +453,164 @@ td {
     .footer {
         justify-content: space-between;
     }
+}
+.dropbtn {
+    background-color: #4c576b;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    font-family: 'Jetbrains Mono';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #4c576b;
+    height: 2.8rem;
+    width: 7rem;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: black;
+    min-width: 230px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+    animation-iteration-count: 1;
+    animation-name:slideout;
+    animation-duration:1800ms;
+    border-radius: 2rem;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: white    ;
+    border-bottom: white solid 1px;
+    padding: 22px 26px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:last-of-type {
+    border-bottom: none;
+
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #212837;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    animation-duration: 800ms;
+    animation-name: slidein;
+    visibility: visible;
+}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #4c576b;}
+  .hi
+  {
+    color: white   ;
+    font-size: 16px;
+    margin-top: 10px;
+    display: grid;
+    margin-left: 8vw;
+    margin-right: 150px;
+    word-wrap: break-word   ;
+    min-width: 15%;
+    width:75%;
+    border-radius: 0.6rem;
+    font-family: 'Jetbrains Mono';
+    padding: 0px 0px 0px 60px;
+    font-weight: 100;
+
+}
+  .italic
+  {
+    font-size: 48px;
+    font-weight: bolder;
+  }
+  .sub-italic
+  {
+    font-size: 24px;
+  }
+  @keyframes animation1
+  {
+   0%{
+         border-color: #000000;
+   }
+   100%{
+       border-color:#121213   ;
+   } 
+  }
+  @keyframes animation2
+  {
+   0%{
+         border-color: #121213;
+   }
+   100%{
+       border-color:#000000   ;
+   } 
+  }
+  @keyframes slidein
+  {
+    0%{transform: translate(0,-100vh);}
+    100%{transform: translate(0vw,0vw);}
+  }
+  .backg
+  {
+    animation-name: animation1;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+  }
+  .backg2
+  {
+    animation-name: animation2;
+    animation-fill-mode: both;
+    animation-duration: 2s;
+  }
+.blue
+{
+    color: wheat;
+    display: flex;
+    justify-content: center;        
+    font-size: 2.5vw;
+    width: 100%;
+}
+@media (max-width:1300px) {
+    .blue
+{
+    font-size: 5vw;
+}
+}
+ .blue
+{
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0;
+      font-family: "Exo", "serif";
+      margin-top: 1vh;
+      font-size: 3vw;
+}
+
+@media (max-width:500px) {
+    .blue
+{
+    font-size: 9vw;
+}
+
+.container
+{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 15px;
+}
 }

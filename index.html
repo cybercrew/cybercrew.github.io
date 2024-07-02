@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="CyberCrew">
@@ -11,22 +12,32 @@
     <script src="./scripts/three.min.js"></script>
     <script src="./scripts/jquery.min.js"></script>
     <script src="./scripts/typed.min.js"></script>
-
     <script src="./scripts/background.js"></script>
     <script src="./scripts/functions.js"></script>
     <link rel="stylesheet" href="./styles/index.css">
-
     <title>CyberCrew | DPSSGR</title>
 </head>
 
 <body>
-    <div class="header">
+    <div class="header ">
         <button class="headerButton clickable" onclick="scrollToAbout()">About</button>
         <button class="headerButton clickable" onclick="window.location.href='./articles'">Articles</button>
-        <button class="headerButton clickable"
-            onclick="window.location.href=('https://techknow.dpssrinagar.com')">TechKnow</button>
+        <button class="headerButton clickable " onclick="window.location.href=('https://techknow.dpssrinagar.com')">TechKnow</button>
+             <div class="dropdown">
+                <button class="dropbtn" aria-haspopup="true">Fields</button>
+                <div class="dropdown-content" aria-label="submenu">
+                  <a href="./Fields/Ai.html">AI</a>
+                  <a href="./Fields/Robtoics.html">Robotics</a>
+                  <a href="./Fields/Marketing.html">Digital Marketing</a>
+                  <a href="./Fields/App_Dev.html">App Development</a>
+                  <a href="./Fields/Game_Dev.html">Game Development</a>
+                  <a href="./Fields/Web_Dev.html">Web Development</a>
+                  <a href="./Fields/GraphicDesign.html">Graphic Design</a>
+                  <a href="./Fields/VideoEditing.html">Video Editing</a>
+                </div>
+              </div>
     </div>
-    <div class="p1">
+    <div class="p1" id="p1">
         <div class="logoContainer">
             <img src="./assets/cclogo.png" alt="CyberCrew Logo" class="logo">
         </div>
