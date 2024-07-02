@@ -584,6 +584,12 @@ td {
     justify-content: center;        
     font-size: 2.5vw;
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    font-family: "Exo", "serif";
+    margin-top: 1vh;
+    font-size: 3vw;
 }
 @media (max-width:1300px) {
     .blue
@@ -591,16 +597,6 @@ td {
     font-size: 5vw;
 }
 }
- .blue
-{
-      padding-left: 0;
-      padding-right: 0;
-      margin: 0;
-      font-family: "Exo", "serif";
-      margin-top: 1vh;
-      font-size: 3vw;
-}
-
 @media (max-width:500px) {
     .blue
 {
