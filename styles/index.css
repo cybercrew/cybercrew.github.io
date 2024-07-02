@@ -611,6 +611,15 @@ td {
     margin-left: 15px;
 }
 .dropdown-content {
-    transform: translate(-50%,0%);
+    animation-name: slidein1;
+    animation-duration: 300ms;
+    animation-delay: 0;
+
+  }
+
+  @keyframes slidein1
+  {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(-50vh,0);}
   }
 }
