@@ -609,8 +609,8 @@ td {
 
 .container
 {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     margin-left: 15px;
 }
 }
