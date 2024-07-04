@@ -486,10 +486,6 @@ td {
     min-width: 230px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 3;
-    animation-iteration-count: 1;
-    animation-name:slideout;
-    animation-duration:1800ms;
-    border-radius: 2rem;
   }
   /* Links inside the dropdown */
   .dropdown-content a {
@@ -610,9 +606,22 @@ td {
     padding-right: 0 !important;
     margin-left: 15px;
 }
-  .dropdown-content
-  {
+.dropdown-content
+{
     transform: translate(-40vw,0);
+}
+  @keyframes slidein
+  {
+    0%{transform: translate(0,-100vh);}
+    100%{transform: translate(0vw,0vw);}
   }
 
 }
+@media (max-width:500px){
+    .dropbtn
+    {
+        height: 2.3rem;
+        width: 5rem
+    }
+}
+
