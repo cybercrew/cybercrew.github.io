@@ -30,7 +30,7 @@
     <script>
         let params = new URLSearchParams(window.location.search);
         let articleName = params.get("title")
-        fetch('https://backend-ddu1.onrender.com/articles')
+        fetch('https://website-backend-y7wt.onrender.com/articles')
             .then(response => response.json())
             .then(data => {
                 let article = data.find((article) => article.title.split(" ").join("_") == articleName);
