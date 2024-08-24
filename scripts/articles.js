@@ -1,5 +1,5 @@
 function articles() {
-    fetch("https://backend-ddu1.onrender.com/articles")
+    fetch("https://website-backend-y7wt.onrender.com/articles")
 
         .then(res => res.json())
         .then(data => {
