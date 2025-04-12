@@ -1,0 +1,226 @@
+.events-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-card {
+    background: rgba(33, 40, 55, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    position: absolute;
+    transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 0;
+    transform: translateX(100%) scale(0.8);
+}
+
+.event-card.active {
+    opacity: 1;
+    transform: translateX(0) scale(1.2);
+    z-index: 2;
+}
+
+.event-card.prev {
+    opacity: 0.7;
+    transform: translateX(-100%) scale(0.8) translateZ(-100px);
+    z-index: 1;
+}
+
+.event-card.next {
+    opacity: 0.7;
+    transform: translateX(100%) scale(0.8) translateZ(-100px);
+    z-index: 1;
+}
+
+.event-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    z-index: -1;
+}
+
+.event-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #cf1cdf, #4c576b);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.event-card:hover::after {
+    transform: scaleX(1);
+}
+
+.event-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 2px solid #4c576b;
+}
+
+.event-content {
+    padding: 1.5rem;
+}
+
+.event-title {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    font-family: 'Exo', sans-serif;
+}
+
+.event-date {
+    color: #cf1cdf;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.event-description {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.event-link {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #4c576b;
+    color: white;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-family: 'JetBrains Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+.event-link:hover {
+    background: #3a4353;
+    transform: translateX(5px);
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.slider-btn.prev {
+    left: 20px;
+}
+
+.slider-btn.next {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .events-container {
+        padding: 1rem;
+    }
+
+    .event-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+@media (max-width: 768px) {
+.events-container {
+padding: 1rem;
+min-height: 60vh; /* Reduced height for mobile */
+}
+
+.event-card {
+width: 280px; /* Smaller cards on mobile */
+max-width: 90%; /* Prevent overflow */
+}
+
+.event-card.active {
+transform: translateX(0) scale(1); /* Reduced scale on mobile */
+}
+
+.event-card.prev,
+.event-card.next {
+opacity: 0; /* Hide side cards on mobile */
+transform: translateX(0) scale(0.8);
+}
+
+.slider-btn {
+width: 40px; /* Smaller buttons */
+height: 40px;
+}
+
+.slider-btn.prev {
+left: 5px;
+}
+
+.slider-btn.next {
+right: 5px;
+}
+
+.event-title {
+font-size: 1.2rem; /* Smaller title */
+}
+
+.event-description {
+font-size: 0.9rem; /* Smaller text */
+}
+
+.event-image {
+height: 140px; /* Smaller images */
+}
+}
+
+@media (max-width: 480px) {
+.event-card {
+width: 240px; /* Even smaller cards for very small screens */
+}
+
+.event-content {
+padding: 1rem;
+}
+}
