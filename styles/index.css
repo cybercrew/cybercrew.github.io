@@ -25,7 +25,10 @@ body {
 .clickable {
     cursor: pointer;
 }
-
+.c2
+{
+    display: none !important;
+}
 .header {
     display: flex;
     justify-content: center;
@@ -465,24 +468,33 @@ td {
     align-items: center;
     justify-content: center;
     margin: 0.5rem;
-    border-radius: 2rem;
+    border-radius: 5rem;
     border: none;
     background-color: #4c576b;
     height: 2.8rem;
-    width: 7rem;
+    width: 6rem;
   }
-  
-  /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     display: inline-block;
   }
   
-  /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     visibility: hidden;
     position: absolute;
     background-color: black;
+    border-radius: 20px ;
+    border: 0;
+    min-width: 230px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+  }
+  .dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: black;
+    border-radius: 20px ;
+    border: 0;
     min-width: 230px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 3;
@@ -491,8 +503,11 @@ td {
   .dropdown-content a {
     color: white    ;
     border-bottom: white solid 1px;
-    padding: 22px 26px;
+    font-size: 18px;
+    padding: 15px 20px;
     text-decoration: none;
+    word-break: keep-all !important;
+    word-wrap :normal !important;
     display: block;
   }
   .dropdown-content a:last-of-type {
@@ -505,7 +520,7 @@ td {
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
-    animation-duration: 800ms;
+    animation-duration: 300ms;
     animation-name: slidein;
     visibility: visible;
 }
@@ -558,8 +573,8 @@ td {
   }
   @keyframes slidein
   {
-    0%{transform: translate(0,-100vh);}
-    100%{transform: translate(0vw,0vw);}
+    0%{transform: translate(100vw,0vh);}
+    100%{transform: translate(0vw,0vh);}
   }
   .backg
   {
@@ -587,13 +602,18 @@ td {
     margin-top: 1vh;
     font-size: 3vw;
 }
+.dropbtn :hover
+{
+    border-radius: 1rem !important;
+    background-color: #3a4353 !important;
+}
 @media (max-width:1300px) {
     .blue
 {
     font-size: 5vw;
 }
 }
-@media (max-width:500px) 
+@media (max-width:700px) 
 {
     .blue
 {
@@ -608,20 +628,24 @@ td {
 }
 .dropdown-content
 {
-    transform: translate(-40vw,0);
+        font-size: 20px;
+        transform: translate(-20vw, 0vh);
 }
   @keyframes slidein
   {
-    0%{transform: translate(0,-100vh);}
-    100%{transform: translate(0vw,0vw);}
+    0%{transform: translate(100vw,-0vh);}
+    100%{transform: translate(-20vw,0vh);}
   }
-
+.container
+{
+    font-size: 20px !important;
 }
-@media (max-width:500px){
+}
+@media (max-width:750px){
     .dropbtn
     {
-        height: 2.3rem;
-        width: 5rem
+        height: 2.3rem !important;
+        width: 6rem !important
     }
 }
 
